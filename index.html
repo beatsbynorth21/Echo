@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo Onchain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 80px 20px; text-align: center; }
+    h1,h2,h3,h4 { margin: 20px 0; }
+    button {
+      cursor: pointer;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover { background: #1565c0; box-shadow: 0 0 15px #1a73e8; }
+
+    /* Hero */
+    #hero {
+      min-height: 90vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      background: linear-gradient(135deg, #0d0d0d 0%, #001f3f 100%);
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, #1a73e8 0%, transparent 60%);
+      animation: float 20s linear infinite; opacity: 0.2;
+    }
+    @keyframes float {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    #hero img { width: 120px; margin-bottom: 20px; }
+
+    /* Sections */
+    #utility { background: #111; }
+    .utility-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+    .utility-item {
+      background: #1a1a1a; padding: 20px; border-radius: 15px; width: 250px; transition: 0.3s;
+    }
+    .utility-item:hover { transform: translateY(-5px); background: #222; box-shadow: 0 0 15px #1a73e8; }
+    .utility-item h3 { color: #1a73e8; }
+
+    #about { background: #0d0d0d; }
+    .about-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+    .about-item {
+      background: #1a1a1a; padding: 20px; border-radius: 15px; width: 300px;
+    }
+    .about-item h3 { color: #1a73e8; }
+
+    #team { background: #111; }
+    .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+    .team-member {
+      background: #1a1a1a; padding: 20px; border-radius: 15px; width: 220px; transition: 0.3s;
+    }
+    .team-member:hover { transform: translateY(-5px); box-shadow: 0 0 15px #1a73e8; }
+    .team-member img { border-radius: 50%; width: 100px; height: 100px; }
+    .team-member h4 { margin-top: 15px; color: #1a73e8; }
+
+    #roadmap { background: #0d0d0d; }
+    .roadmap-item {
+      margin: 20px 0; padding: 15px;
+      background: #1a1a1a; border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto;
+      transition: 0.3s;
+    }
+    .roadmap-item:hover { box-shadow: 0 0 15px #1a73e8; }
+
+    #cta { background: #111; padding: 60px 20px; }
+
+    @media (max-width: 768px) {
+      .utility-grid, .team-grid, .about-grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section id="hero">
+    <img src="https://mobile.twstalker.com/Echonchain/logo" alt="Echo Logo">
+    <h1>Echo: A Community-Governed Token on Solana</h1>
+    <p>Participate in project decisions and earn from ecosystem growth.</p>
+    <div>
+      <button onclick="location='#utility'">Learn More</button>
+      <button onclick="window.open('https://x.com/echonchain', '_blank')">Join the Community on X</button>
+    </div>
+  </section>
+
+  <!-- Utility -->
+  <section id="utility">
+    <h2>Govern, Earn, and Grow with Echo</h2>
+    <div class="utility-grid">
+      <div class="utility-item">
+        <h3>Community Governance</h3>
+        <p>Vote on project decisions and influence the Echo ecosystem.</p>
+      </div>
+      <div class="utility-item">
+        <h3>Revenue Sharing</h3>
+        <p>Earn a share of ecosystem revenue just by holding Echo.</p>
+      </div>
+      <div class="utility-item">
+        <h3>Decentralized & Transparent</h3>
+        <p>All actions are on-chain and auditable via Solana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Echo</h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <h3>The Token</h3>
+        <p>Echo is a Solana-based community token designed to empower holders with governance rights and real revenue participation.</p>
+      </div>
+      <div class="about-item">
+        <h3>The Founder</h3>
+        <p>The visionary leading Echo’s development and strategy, building with transparency and innovation.</p>
+      </div>
+      <div class="about-item">
+        <h3>The Co-Founder</h3>
+        <p>Focuses on community growth and engagement, strengthening the ecosystem every day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Founder">
+        <h4>Founder</h4>
+        <p>@beatsbynorthhh</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Co-Founder">
+        <h4>Co-Founder</h4>
+        <p>@Ixzy999</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Tech Lead">
+        <h4>Tech Lead</h4>
+        <p>@Raphayal</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Developer">
+        <h4>Developer</h4>
+        <p>@salimuaxu</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100" alt="Marketer">
+        <h4>Marketer</h4>
+        <p>@BasedAisha</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Updated Roadmap -->
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+
+    <div class="roadmap-item">
+      <h4>Phase 1 — Foundations</h4>
+      <p>Build core infrastructure and onboard the community with a focus on transparency and real utility.</p>
+    </div>
+
+    <div class="roadmap-item">
+      <h4>Phase 2 — Growth & Engagement</h4>
+      <p>Expand ecosystem features, governance tools, and engagement mechanisms for holders.</p>
+    </div>
+
+    <div class="roadmap-item">
+      <h4>Phase 3 — Revenue & Shared Value</h4>
+      <p>Enable revenue sharing mechanisms and distribute value back to members of the Echo community.</p>
+    </div>
+
+    <div class="roadmap-item">
+      <h4>Phase 4 — Long‑Term Impact</h4>
+      <p>Focus on sustainability, broader ecosystem adoption, and tools that support longevity.</p>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section id="cta">
+    <h2>Get Started with Echo Today</h2>
+    <button onclick="window.open('https://x.com/echonchain', '_blank')">Join the Community on X</button>
+    <button onclick="location='#utility'">Learn More</button>
+  </section>
+
+  <script>
+    // Scroll fade-in animations
+    const items = document.querySelectorAll('.utility-item, .about-item, .team-member, .roadmap-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(item => {
+      item.style.opacity = 0;
+      item.style.transform = 'translateY(20px)';
+      observer.observe(item);
+    });
+  </script>
+
+</body>
+</html>
